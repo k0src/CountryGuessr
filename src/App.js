@@ -6,7 +6,7 @@ import RoundEnd from './components/RoundEnd';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />

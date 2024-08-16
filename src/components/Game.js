@@ -13,7 +13,7 @@ function Game() {
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [pointsPool, setPointsPool] = useState(1000);
   const [usedCountries, setUsedCountries] = useState([]);
-  const [shake, setShake] = useState(false); // New state for shake effect
+  const [shake, setShake] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {

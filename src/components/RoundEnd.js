@@ -10,7 +10,7 @@ function RoundEnd() {
   useEffect(() => {
     if (totalScore > 4500) {
       const script = document.createElement('script');
-      script.src = '/confetti.js';
+      script.src = `${process.env.PUBLIC_URL}/confetti.js`;
       script.async = true;
       document.body.appendChild(script);
 

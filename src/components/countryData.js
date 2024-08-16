@@ -972,7 +972,7 @@ const countries = [
       {
         name: 'Liberia',
         hints: [
-          'This country was founded by freed American slaves in the early 19th century, and its capital, Monrovia, is named after U.S. President James Monroe.',
+          'This country was founded by freed American slaves in the early 19th century, and its capital is named after U.S. President James Monroe.',
           'It was one of the few African countries to remain independent during the Scramble for Africa and was not colonized by a European power.',
           'The country has a history of political instability, including a brutal civil war from 1989 to 2003.',
           'It is rich in natural resources such as iron ore, rubber, and timber, though its economy remains underdeveloped.',
