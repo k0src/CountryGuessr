@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import './styles/RoundEnd.css';
+import logo from '../assets/logo.png';
 
 function RoundEnd() {
   const location = useLocation();
@@ -21,7 +22,7 @@ function RoundEnd() {
   }, [totalScore]);
 
   const getMessage = () => {
-    if (totalScore === 6000) {
+    if (totalScore === 5000) {
       return 'Perfect Game!';
     } else if (totalScore > 4500) {
       return 'Nice job!';
@@ -37,15 +38,18 @@ function RoundEnd() {
   };
 
   const handlePlayAgain = () => {
-    navigate('/game');
+    navigate('/');
   };
 
   return (
     <div className="round-end-container">
+      <Link to="/">
+        <img src={logo} alt="Country Guessr Logo" className="logo" />
+      </Link>
       <div className="round-end-message">{getMessage()}</div>
       <div className="final-score">Your total score: {totalScore}</div>
       <div className="final-time">Time: {formatTime(timeElapsed)}</div>
-      <button className="play-again-button" onClick={handlePlayAgain}>Play Again</button>
+      <button className="play-again-button" onClick={handlePlayAgain}>Home</button>
       <canvas id="canvas"></canvas>
     </div>
   );

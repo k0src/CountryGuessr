@@ -64,6 +64,7 @@ button:hover {
 }
 .score, .time {
     font-size: 18px;
+    margin-bottom: 0px;
 }
 .correct-guess-message {
     font-size: 18px;
@@ -92,3 +93,49 @@ button:hover {
   .shake {
     animation: shake 0.5s;
   }  
+
+.logo {
+    width: 50px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+
+.audio-control {
+    margin: 20px 0;
+}
+
+.hint-box {
+    width: 300px;
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    color: #333; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hint-box.visible {
+    opacity: 1;
+}
+
+.hint-color-0 {
+    background-color: #fff9c4; /* Light yellow background */
+}
+
+.hint-color-1 {
+    background-color: #ffccbc; /* Light peach background */
+}
+
+.hint-color-2 {
+    background-color: #ffe0b2; /* Light orange background */
+}
+
+.hint-color-3 {
+    background-color: #b3e5fc; /* Light blue background */
+}
+
+.hint-color-4 {
+    background-color: #c8e6c9; /* Light green background */
+}

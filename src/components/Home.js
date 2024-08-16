@@ -20,6 +20,10 @@ function Home() {
     navigate('/game');
   };
 
+  const handleLanguageMode = () => {
+    navigate('/languageguessr');
+  };
+
   return (
     <div className="home-container">
       <img src={logo} alt="Logo" className="logo" />
@@ -48,7 +52,10 @@ function Home() {
           <img src={flag10} alt="Flag 10" />
         </div>
       </div>
-      <button className="start-game-button" onClick={handleStartGame}>Start Game</button>
+      <div className="button-container">
+        <button className="start-game-button" onClick={handleStartGame}>Classic Mode</button>
+        <button className="start-game-button" onClick={handleLanguageMode}>Language Mode</button>
+      </div>
     </div>
   );
 }

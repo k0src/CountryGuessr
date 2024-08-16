@@ -43,3 +43,9 @@ canvas {
     height: 100%;
     pointer-events: none;
 }
+
+.logo {
+    width: 50px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }

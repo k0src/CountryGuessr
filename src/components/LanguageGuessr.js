@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './styles/Game.css';
-import countries from './countryData';
+import './styles/Game.css'; 
+import languages from './languageData'; 
 import logo from '../assets/logo.png';
 
-// to do:
-// add "hint pool" for each country (multiple hard, medium, easy hints for each country)
-// add dailyy challenge mode like wordle
-// add speed round - one hint, 30 seconds to guess
-// add flag gusser mode - guess country based on a small fragment of the flag, if they get it wrong, show more of the flag
-// add mcdonalds mode - guess country based on mcdonalds menu items
-// add cultral mode - guess country based on cultural artifacts, clothing, cusine, customs, etc
-// add lanaugage mode - guess langauge based on a spoken phrase
-// soundgussr - guess country based on a recording of street sounds
-
-function Game() {
+function LanguageGuessr() {
   const [round, setRound] = useState(1);
-  const [score, setScore] = useState(0); 
-  const [currentCountry, setCurrentCountry] = useState(countries[0]);
-  const [currentHintIndex, setCurrentHintIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
   const [guess, setGuess] = useState('');
   const [correctGuessMessage, setCorrectGuessMessage] = useState('');
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [pointsPool, setPointsPool] = useState(1000);
-  const [usedCountries, setUsedCountries] = useState([]);
+  const [usedLanguages, setUsedLanguages] = useState([]);
+  const [hintVisible, setHintVisible] = useState(false);
   const [shake, setShake] = useState(false);
   const navigate = useNavigate();
 
@@ -36,9 +26,9 @@ function Game() {
   }, []);
 
   useEffect(() => {
-    selectNewCountry();
-    setCurrentHintIndex(0);
+    selectNewLanguage();
     setPointsPool(1000);
+    setHintVisible(false);
   }, [round]);
 
   useEffect(() => {
@@ -51,19 +41,19 @@ function Game() {
     }
   }, [correctGuessMessage]);
 
-  const selectNewCountry = () => {
-    let newCountry;
+  const selectNewLanguage = () => {
+    let newLanguage;
     do {
-      newCountry = countries[Math.floor(Math.random() * countries.length)];
-    } while (usedCountries.includes(newCountry.name));
+      newLanguage = languages[Math.floor(Math.random() * languages.length)];
+    } while (usedLanguages.includes(newLanguage.country));
 
-    setCurrentCountry(newCountry);
-    setUsedCountries((prevUsedCountries) => [...prevUsedCountries, newCountry.name]);
+    setCurrentLanguage(newLanguage);
+    setUsedLanguages((prevUsedLanguages) => [...prevUsedLanguages, newLanguage.country]);
   };
 
   const handleGuess = () => {
-    if (guess.toLowerCase() === currentCountry.name.toLowerCase()) {
-      setCorrectGuessMessage(`Correct guess: ${currentCountry.name}`);
+    if (guess.toLowerCase() === currentLanguage.country.toLowerCase()) {
+      setCorrectGuessMessage(`Correct guess: ${currentLanguage.country}`);
       const pointsEarned = Math.max(pointsPool, 0);
 
       setScore((prevScore) => prevScore + pointsEarned);
@@ -76,12 +66,12 @@ function Game() {
       }
     } else {
       setShake(true);
-      setTimeout(() => setShake(false), 500); 
+      setTimeout(() => setShake(false), 500);
       const newPointsPool = pointsPool - 150;
 
       if (newPointsPool <= 0) {
         setPointsPool(0);
-        setCorrectGuessMessage(`The correct answer was: ${currentCountry.name}`);
+        setCorrectGuessMessage(`The correct answer was: ${currentLanguage.country}`);
         if (round < 5) {
           setRound(round + 1);
           setGuess('');
@@ -94,11 +84,9 @@ function Game() {
     }
   };
 
-  const revealNextHint = () => {
-    if (currentHintIndex < currentCountry.hints.length - 1) {
-      setCurrentHintIndex(currentHintIndex + 1);
-      setPointsPool(pointsPool - 100);
-    }
+  const revealHint = () => {
+    setHintVisible(true);
+    setPointsPool(pointsPool - 100);
   };
 
   const handleKeyDown = (event) => {
@@ -116,19 +104,10 @@ function Game() {
   return (
     <div className={`game-container ${shake ? 'shake' : ''}`}>
       <Link to="/">
-          <img src={logo} alt="Country Guessr Logo" className="logo" />
+        <img src={logo} alt="Country Guessr Logo" className="logo" />
       </Link>
       <h2>Round {round}/5</h2>
-      <div className="hints-container">
-        {currentCountry.hints.map((hint, index) => (
-          <div
-            key={index}
-            className={`hint-box ${index <= currentHintIndex ? 'visible' : ''} hint-color-${index}`}
-          >
-            {hint}
-          </div>
-        ))}
-      </div>
+      <audio controls src={currentLanguage.audio} className="audio-control"></audio>
       <input
         type="text"
         value={guess}
@@ -137,10 +116,7 @@ function Game() {
         placeholder="Enter your guess..."
         className="guess-input"
       />
-      <div className="button-container">
         <button onClick={handleGuess}>Submit Guess</button>
-        <button onClick={revealNextHint}>Reveal Hint</button>
-      </div>
       <p className="score">Score: {score}</p>
       <p className="time">Time: {formatTime(timeElapsed)}</p>
       {correctGuessMessage && (
@@ -150,4 +126,4 @@ function Game() {
   );
 }
 
-export default Game;
+export default LanguageGuessr;
