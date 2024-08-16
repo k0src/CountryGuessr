@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/countryguessr/static/css/main.f5c137bb.css",
+    "main.js": "/countryguessr/static/js/main.93518ddd.js",
+    "static/js/453.ea57e5f8.chunk.js": "/countryguessr/static/js/453.ea57e5f8.chunk.js",
+    "static/media/flag7.png": "/countryguessr/static/media/flag7.39b610ac85b4b7c34f94.png",
+    "static/media/flag6.png": "/countryguessr/static/media/flag6.1bbbecdcdd5b39928ea5.png",
+    "static/media/flag10.png": "/countryguessr/static/media/flag10.fb1c03931c5a6b9ae643.png",
+    "static/media/flag8.png": "/countryguessr/static/media/flag8.d4be329d7ef9f0d23cbd.png",
+    "static/media/flag4.png": "/countryguessr/static/media/flag4.2f2f95fd6bc590671c7a.png",
+    "static/media/flag9.png": "/countryguessr/static/media/flag9.f828ddc2a2687c8c16ba.png",
+    "static/media/flag1.png": "/countryguessr/static/media/flag1.942c1c9d0408051e27eb.png",
+    "static/media/flag2.png": "/countryguessr/static/media/flag2.bf33388a766d893ba3a3.png",
+    "static/media/flag3.png": "/countryguessr/static/media/flag3.fef36a17adc2373114a1.png",
+    "static/media/flag5.png": "/countryguessr/static/media/flag5.76da1e24130407a0465b.png",
+    "static/media/logo.png": "/countryguessr/static/media/logo.8679221b0c1d05e0c152.png",
+    "index.html": "/countryguessr/index.html",
+    "main.f5c137bb.css.map": "/countryguessr/static/css/main.f5c137bb.css.map",
+    "main.93518ddd.js.map": "/countryguessr/static/js/main.93518ddd.js.map",
+    "453.ea57e5f8.chunk.js.map": "/countryguessr/static/js/453.ea57e5f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5c137bb.css",
+    "static/js/main.93518ddd.js"
+  ]
+}
