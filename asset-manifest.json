@@ -1,9 +1,21 @@
 {
   "files": {
-    "main.css": "/CountryGuessr/static/css/main.f5c137bb.css",
-    "main.js": "/CountryGuessr/static/js/main.32bdee2b.js",
+    "main.css": "/CountryGuessr/static/css/main.76d3addb.css",
+    "main.js": "/CountryGuessr/static/js/main.77ea2ee7.js",
     "static/js/453.ea57e5f8.chunk.js": "/CountryGuessr/static/js/453.ea57e5f8.chunk.js",
+    "static/media/israelhebrew.mp3": "/CountryGuessr/static/media/israelhebrew.497d57959a43b70cae20.mp3",
+    "static/media/armeniaarmenian.mp3": "/CountryGuessr/static/media/armeniaarmenian.fd92136f6e3a4449c389.mp3",
+    "static/media/germanygerman.mp3": "/CountryGuessr/static/media/germanygerman.a06c8658022455622952.mp3",
+    "static/media/japanjapanese.mp3": "/CountryGuessr/static/media/japanjapanese.ceb662a2efba19b8814d.mp3",
+    "static/media/canadafrench.mp3": "/CountryGuessr/static/media/canadafrench.ed26d63f5dd1df3b4293.mp3",
+    "static/media/albaniaalbanian.mp3": "/CountryGuessr/static/media/albaniaalbanian.9377fd352b5f80f6f3b0.mp3",
+    "static/media/australiaenglish.mp3": "/CountryGuessr/static/media/australiaenglish.025309d070ef90e40ecd.mp3",
+    "static/media/angolaportuguese.mp3": "/CountryGuessr/static/media/angolaportuguese.17f4c5749ea3e5d36d6f.mp3",
+    "static/media/antiguaandbarbudacreole.mp3": "/CountryGuessr/static/media/antiguaandbarbudacreole.0bd951a9d66a21f9c329.mp3",
     "static/media/flag7.png": "/CountryGuessr/static/media/flag7.39b610ac85b4b7c34f94.png",
+    "static/media/andorracatalan.mp3": "/CountryGuessr/static/media/andorracatalan.15354de51976ea9eff14.mp3",
+    "static/media/argentinaspanish.mp3": "/CountryGuessr/static/media/argentinaspanish.4932276ba6bda27fcfb3.mp3",
+    "static/media/usenglish.mp3": "/CountryGuessr/static/media/usenglish.1e6c9802a7c3fa9c4a68.mp3",
     "static/media/flag6.png": "/CountryGuessr/static/media/flag6.1bbbecdcdd5b39928ea5.png",
     "static/media/flag10.png": "/CountryGuessr/static/media/flag10.fb1c03931c5a6b9ae643.png",
     "static/media/flag8.png": "/CountryGuessr/static/media/flag8.d4be329d7ef9f0d23cbd.png",
@@ -15,12 +27,12 @@
     "static/media/flag5.png": "/CountryGuessr/static/media/flag5.76da1e24130407a0465b.png",
     "static/media/logo.png": "/CountryGuessr/static/media/logo.8679221b0c1d05e0c152.png",
     "index.html": "/CountryGuessr/index.html",
-    "main.f5c137bb.css.map": "/CountryGuessr/static/css/main.f5c137bb.css.map",
-    "main.32bdee2b.js.map": "/CountryGuessr/static/js/main.32bdee2b.js.map",
+    "main.76d3addb.css.map": "/CountryGuessr/static/css/main.76d3addb.css.map",
+    "main.77ea2ee7.js.map": "/CountryGuessr/static/js/main.77ea2ee7.js.map",
     "453.ea57e5f8.chunk.js.map": "/CountryGuessr/static/js/453.ea57e5f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5c137bb.css",
-    "static/js/main.32bdee2b.js"
+    "static/css/main.76d3addb.css",
+    "static/js/main.77ea2ee7.js"
   ]
 }
