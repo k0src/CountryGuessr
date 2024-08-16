@@ -1,0 +1,63 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.home-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.scrolling-flags-container {
+  width: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+  height: 50px;
+}
+
+.scrolling-flags {
+  display: flex;
+  animation: scroll-flags 30s linear infinite;
+}
+
+.scrolling-flags img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+@keyframes scroll-flags {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-108%);
+  }
+}
+
+.start-game-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.start-game-button:hover {
+  background-color: #45a049;
+}
